@@ -118,8 +118,6 @@ The image path / image name with individual line are turned into <img> tag.
 This is footer paragraph.
 ```
 
-### Image Handling
-
 ### Page Elements and Rendering
 
 - **Cover Image**: Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient mask is applied to the cover image. The mask is a circle with its center following the mouse pointer, transitioning from black to `rgba(255,255,255,0)` with a radius of 300px. In this project, we do not need to consider the possibility of a missing cover image.
@@ -132,6 +130,8 @@ This is footer paragraph.
 
 - **Aside Information**: Date, tags, draft status (sticky on scroll).
 - **Main Content**: Dynamically loaded. HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags. Photos expand on click, reverting on second click or scroll. First paragraph has a drop cap spanning three lines.
+
+![Sample page](images/project-description-images/sample-page.jpg)
 
 ### Accessibility and Meta Tags
 
