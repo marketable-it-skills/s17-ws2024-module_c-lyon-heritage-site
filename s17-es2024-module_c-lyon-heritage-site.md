@@ -30,9 +30,22 @@ There is one central `images` folder under `content-pages`. All image paths ment
 
 Define URL routes for listing content, accessing pages, and querying tags:
 
+#### Examples
+
+- `/heritages/2024-09-01-example-page` shows the page for `2024-09-01-example-page.html` or `.txt`
+
+- `/heritages/sub-folder-name` lists the pages and sub-folders inside `sub-folder-name`
+
+- `/heritages/sub-folder-name/2024-09-10-welcome-to-lyon` shows the file inside `sub-folder-name`
+
+- `/heritages/sub-folder-1/sub-folder-2/2024-09-10-welcome-to-lyon` works the same for nested folders
+
 - `/`: Index listing.
+
 - `/heritages/YYYY-MM-DD-title`: Displays content page.
+
 - `/heritages/sub-folder-name`: Lists sub-folder contents.
+
 - `/tags/tag-name`: Lists pages containing the specified tag.
 
 ### Content Listing
@@ -41,7 +54,7 @@ The list shows titles and summaries, linking to individual pages. Exclude:
 
 - Pages dated in the future.
 - Draft pages — that is, files where the `draft` key is set to `true` in the front-matter. If the `draft` key is missing or set to any value other than `true`, the page is not considered a draft.
-- Pages without proper date format (`YYYY-MM-DD-`).
+- Pages without a valid date prefix (i.e., the first 11 characters not in `YYYY-MM-DD-` format).
 
 Sub-folders are listed alphabetically, followed by content pages in reversed alphabetical order (latest at top).
 
@@ -65,11 +78,11 @@ cover: example-cover.jpeg
 summary: Sample summary.
 ```
 
-HTML content renders directly. Text files render lines as paragraphs, and standalone image paths as `<img>` tags.
+HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags.
 
 ### Image Handling
 
-Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient spotlight effect follows the cursor on cover images.
+Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient spotlight effect follows the cursor on cover images. In this project, we do not need to consider the possibility of a missing cover image. Image paths in both `.html` and `.txt` files must be transformed to match the final served path structure. In this project, we do not need to consider the possibility of a missing cover image.
 
 ### Page Elements
 
