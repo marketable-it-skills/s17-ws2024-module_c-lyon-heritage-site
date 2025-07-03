@@ -82,7 +82,7 @@ HTML content renders directly. Text files render lines as paragraphs. Lines with
 
 ### Image Handling
 
-Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient spotlight effect follows the cursor on cover images. In this project, we do not need to consider the possibility of a missing cover image. Image paths in both `.html` and `.txt` files must be transformed to match the final served path structure. In this project, we do not need to consider the possibility of a missing cover image.
+Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient mask is applied to the cover image. The mask is a circle with its center following the mouse pointer, transitioning from black to `rgba(255,255,255,0)` with a radius of 300px. In this project, we do not need to consider the possibility of a missing cover image.
 
 ### Page Elements
 
