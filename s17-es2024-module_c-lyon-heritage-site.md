@@ -8,27 +8,21 @@
 
 Welcome to Lyon. This vibrant city is known for its historical significance and architectural beauty. In this project, editors have written articles introducing notable heritage sites in Lyon, France. Each article is created in `.html` or `.txt` format, with front-matter embedded for metadata. Files are stored in the `content-pages` folder, which may contain nested subfolders.
 
-There is one central `images` folder under `content-pages`. All image paths mentioned in the articles are relative to this central images folder, regardless of their location within subfolders.
-
 You are tasked with creating a website to host these articles, maintaining the existing article workflow and structure.
-
-The website will list and load these static files, which follow the naming convention: `YYYY-MM-DD-title.txt` or `YYYY-MM-DD-title.html`.
-
-The website will be accessible at `<http://wsXX.worldskills.org/XX_module_C/>`, where `XX` is your seat number.
 
 ## General Description of Project and Tasks
 
 This project does not require a database. Content is managed through static files in the `content-pages` directory and its subfolders. Users should be able to access the home page listing all pages and sub-folders.
 
-### Filename Convention
-
-Files provided follow the format: `YYYY-MM-DD-title-in-lower-case-with-hyphens.html` or `.txt`.
+The website will list and load these static files. Files provided follow the format: `YYYY-MM-DD-title-in-lower-case-with-hyphens.html` or `.txt`.
 
 Example filenames:
 
 - `2024-09-01-example-page.html`
 - `2024-10-20-greatest-lyon-heritage-site.html`
 - `2025-01-01-a-post-for-future-posting.txt`
+
+There is one central `images` folder under `content-pages`. All image paths mentioned in the articles are relative to this central images folder, regardless of their location within subfolders.
 
 ## Requirements
 
