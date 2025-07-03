@@ -40,7 +40,7 @@ Define URL routes for listing content, accessing pages, and querying tags:
 The list shows titles and summaries, linking to individual pages. Exclude:
 
 - Pages dated in the future.
-- Draft pages (`draft: true` in front-matter).
+- Draft pages — that is, files where the `draft` key is set to `true` in the front-matter. If the `draft` key is missing or set to any value other than `true`, the page is not considered a draft.
 - Pages without proper date format (`YYYY-MM-DD-`).
 
 Sub-folders are listed alphabetically, followed by content pages in reversed alphabetical order (latest at top).
@@ -73,7 +73,12 @@ Cover images specified in front-matter or default to filenames in `images` folde
 
 ### Page Elements
 
-- **Title**: Derived from front-matter, `<h1>` tag, or filename.
+- **Title**: Determined using the following priority:
+
+  1. If a `title` is defined in the front-matter, use it.
+  2. If not, use the text content of the first `<h1>` element in the HTML content.
+  3. If neither is available, derive it from the filename by removing the date and replacing hyphens with spaces, then capitalizing each word.
+
 - **Aside Information**: Date, tags, draft status (sticky on scroll).
 - **Main Content**: Dynamically loaded.
 
