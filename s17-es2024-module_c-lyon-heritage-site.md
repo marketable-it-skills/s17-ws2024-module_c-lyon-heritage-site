@@ -30,12 +30,10 @@ There is one central `images` folder under `content-pages`. All image paths ment
 
 Define URL routes for listing content, accessing pages, and querying tags:
 
-- `/XX_module_c/`: Index listing.
-- `/XX_module_c/heritages/YYYY-MM-DD-title`: Displays content page.
-- `/XX_module_c/heritages/sub-folder-name`: Lists sub-folder contents.
-- `/XX_module_c/tags/tag-name`: Lists pages containing the specified tag.
-
-All paths are relative to `<http://wsXX.worldskills.org>`.
+- `/`: Index listing.
+- `/heritages/YYYY-MM-DD-title`: Displays content page.
+- `/heritages/sub-folder-name`: Lists sub-folder contents.
+- `/tags/tag-name`: Lists pages containing the specified tag.
 
 ### Content Listing
 
