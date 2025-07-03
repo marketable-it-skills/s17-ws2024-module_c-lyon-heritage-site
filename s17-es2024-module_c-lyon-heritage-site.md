@@ -78,13 +78,51 @@ cover: example-cover.jpeg
 summary: Sample summary.
 ```
 
-HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags.
+#### Examples
+
+Here is an example content file in `.html` format with front-matter:
+
+```
+---
+title: This is an Example Page
+tags: example, test
+cover: example-cover.jpeg
+summary: This is a sample summary.
+---
+
+<h1>Example Page</h1>
+<p>Here is the rest of the content.</p>
+<p>And some other paragraph.</p>
+<img src="hello-world.jpg" alt="Sample photo">
+<footer>That is all</footer>
+```
+
+Here is an example content file in `.txt` format with front-matter:
+
+```
+---
+title: This is another sample page
+tags: example, test, plain-text
+cover: another-cover.jpeg
+summary: This is a sample page in txt format.
+---
+
+This is sample main content.
+
+Each line of content is turned into <p></p> paragraph.
+
+sample-image.jpeg
+
+The image path / image name with individual line are turned into <img> tag.
+
+This is footer paragraph.
+```
 
 ### Image Handling
 
-Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient mask is applied to the cover image. The mask is a circle with its center following the mouse pointer, transitioning from black to `rgba(255,255,255,0)` with a radius of 300px. In this project, we do not need to consider the possibility of a missing cover image.
+### Page Elements and Rendering
 
-### Page Elements
+- **Cover Image**: Cover images specified in front-matter or default to filenames in `images` folder. A radial gradient mask is applied to the cover image. The mask is a circle with its center following the mouse pointer, transitioning from black to `rgba(255,255,255,0)` with a radius of 300px. In this project, we do not need to consider the possibility of a missing cover image.
 
 - **Title**: Determined using the following priority:
 
@@ -93,9 +131,7 @@ Cover images specified in front-matter or default to filenames in `images` folde
   3. If neither is available, derive it from the filename by removing the date and replacing hyphens with spaces, then capitalizing each word.
 
 - **Aside Information**: Date, tags, draft status (sticky on scroll).
-- **Main Content**: Dynamically loaded.
-
-Photos expand on click, reverting on second click or scroll. First paragraph has a drop cap spanning three lines.
+- **Main Content**: Dynamically loaded. HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags. Photos expand on click, reverting on second click or scroll. First paragraph has a drop cap spanning three lines.
 
 ### Accessibility and Meta Tags
 
