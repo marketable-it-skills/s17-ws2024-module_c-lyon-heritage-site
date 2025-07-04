@@ -141,10 +141,6 @@ It must also be possible to specify multiple keywords using the / character. In 
 
 Ensure accessibility compliance using the aXe tool. Define social sharing meta tags.
 
-### GitHub and File Management
-
-Provide a `.gitignore` to exclude `node_modules` and temporary folders.
-
 ## Assessment
 
 Project evaluation will be conducted using Google Chrome and the aXe accessibility tool.
