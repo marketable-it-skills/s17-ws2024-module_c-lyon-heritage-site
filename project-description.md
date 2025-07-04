@@ -40,13 +40,13 @@ Using the defined URL paths, users can view folder contents, display a selected 
 
 - `/heritages/sub-folder-name` lists the pages and sub-folders inside `/sub-folder-name`
 
-**Displaying page content**:
+**Displaying article page content**:
 
-- `/heritages/2024-09-01-example-page-1` shows the page for `/2024-09-01-example-page-1.html` or `.txt`
+- `/heritages/2024-09-01-example-page-1` shows the article page for `/2024-09-01-example-page-1.html` or `.txt`
 
-- `/heritages/sub-folder-name/2024-09-02-example-page-2` shows the page for `/sub-folder-name/2024-09-02-example-page-2.html` or `.txt`
+- `/heritages/sub-folder-name/2024-09-02-example-page-2` shows the article page for `/sub-folder-name/2024-09-02-example-page-2.html` or `.txt`
 
-- `/tags/tag-name`: Lists pages containing the specified tag.
+- `/tags/tag-name`: Lists articles that contain the specified tag, as defined in the front matter section of each article’s page file.
 
 ### Content Pages
 
