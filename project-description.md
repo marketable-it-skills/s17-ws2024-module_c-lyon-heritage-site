@@ -115,7 +115,7 @@ This is footer paragraph.
 - **Aside Information**: Date, tags, draft status (sticky on scroll).
 - **Main Content**: Dynamically loaded. HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags. Photos expand on click, reverting on second click or scroll. First paragraph has a drop cap spanning three lines.
 
-![Article page layout](assets/project-description-images/article-page-layout.png)
+![Article page layout](/assets/project-description-images/article-page-layout.png)
 
 ### Content Listing
 
@@ -127,7 +127,7 @@ The list shows titles and summaries, linking to individual pages. Exclude:
 
 Subfolders are listed in alphabetical order, followed by content pages in reverse chronological order (most recent at the top).
 
-![Listing page layout](assets/project-description-images/listing-page-layout.png)
+![Listing page layout](/assets/project-description-images/listing-page-layout.png)
 
 ### Search
 
