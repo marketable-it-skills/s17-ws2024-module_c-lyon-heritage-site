@@ -66,7 +66,7 @@ There may be different key-value pairs defined in the front-matter section. Thes
 
 Here is an example content file in `.html` format with front-matter:
 
-```
+```html
 ---
 title: This is an Example Page
 tags: example, test
@@ -77,13 +77,13 @@ summary: This is a sample summary.
 <h1>Example Page</h1>
 <p>Here is the rest of the content.</p>
 <p>And some other paragraph.</p>
-<img src="hello-world.jpg" alt="Sample photo">
+<img src="hello-world.jpg" alt="Sample photo" />
 <footer>That is all</footer>
 ```
 
 Here is an example content file in `.txt` format with front-matter:
 
-```
+```txt
 ---
 title: This is another sample page
 tags: example, test, plain-text
