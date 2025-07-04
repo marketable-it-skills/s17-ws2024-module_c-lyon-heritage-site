@@ -6,15 +6,15 @@
 
 ## Introduction
 
-Welcome to Lyon. This vibrant city is known for its historical significance and architectural beauty. In this project, editors have written articles introducing notable heritage sites in Lyon, France. Each article is created in `.html` or `.txt` format, with front-matter embedded for metadata. Files are stored in the `content-pages` folder, which may contain nested subfolders.
+Welcome to Lyon. This vibrant city is known for its historical significance and architectural beauty. During the project, a content presentation website will be developed, where users can read articles introducing notable heritage sites in Lyon, France. Each article is created in `.html` or `.txt` format, with front-matter embedded for metadata. Files are stored in the `content-pages` folder, which may contain nested subfolders.
 
-You are tasked with creating a website to host these articles, maintaining the existing article workflow and structure.
+Your task is to create a website that hosts these articles, following the file storage structure used for the articles.
 
 ## General Description of Project and Tasks
 
-This project does not require a database. Content is managed through static files in the `content-pages` directory and its subfolders. Users should be able to access the home page listing all pages and sub-folders.
+This project does not require a database. Content is managed through static files in the `content-pages` directory and its subfolders.
 
-The website will list and load these static files. Files provided follow the format: `YYYY-MM-DD-title-in-lower-case-with-hyphens.html` or `.txt`.
+The file names follow the following format: `YYYY-MM-DD-title-in-lower-case-with-hyphens.html` or `.txt`.
 
 Example filenames:
 
@@ -26,41 +26,27 @@ There is one central `images` folder under `content-pages`. All image paths ment
 
 ## Requirements
 
+### Homepage
+
+The homepage displays a list of all pages and subfolders for the users.
+
 ### URL Routes
 
-Define URL routes for listing content, accessing pages, and querying tags:
+Using the defined URL paths, users can view folder contents, display a selected page, and list pages containing a specified tag. The URLs for individual pages, subfolders, or tags are defined as follows:
 
-#### Examples
+**Content listing**:
 
-- `/heritages/2024-09-01-example-page` shows the page for `2024-09-01-example-page.html` or `.txt`
+- `/`: Displays the homepage with a list of all pages and subfolders.
 
-- `/heritages/sub-folder-name` lists the pages and sub-folders inside `sub-folder-name`
+- `/heritages/sub-folder-name` lists the pages and sub-folders inside `/sub-folder-name`
 
-- `/heritages/sub-folder-name/2024-09-10-welcome-to-lyon` shows the file inside `sub-folder-name`
+**Displaying page content**:
 
-- `/heritages/sub-folder-1/sub-folder-2/2024-09-10-welcome-to-lyon` works the same for nested folders
+- `/heritages/2024-09-01-example-page-1` shows the page for `/2024-09-01-example-page-1.html` or `.txt`
 
-- `/`: Index listing.
-
-- `/heritages/YYYY-MM-DD-title`: Displays content page.
-
-- `/heritages/sub-folder-name`: Lists sub-folder contents.
+- `/heritages/sub-folder-name/2024-09-02-example-page-2` shows the page for `/sub-folder-name/2024-09-02-example-page-2.html` or `.txt`
 
 - `/tags/tag-name`: Lists pages containing the specified tag.
-
-### Content Listing
-
-The list shows titles and summaries, linking to individual pages. Exclude:
-
-- Pages dated in the future.
-- Draft pages — that is, files where the `draft` key is set to `true` in the front-matter. If the `draft` key is missing or set to any value other than `true`, the page is not considered a draft.
-- Pages without a valid date prefix (i.e., the first 11 characters not in `YYYY-MM-DD-` format).
-
-Sub-folders are listed alphabetically, followed by content pages in reversed alphabetical order (latest at top).
-
-### Tags and Search
-
-Implement tag filtering (`/tags/tag-name`) and a search input for page titles and content, supporting multiple keywords separated by `/`.
 
 ### Content Pages
 
@@ -69,14 +55,12 @@ Each content file includes:
 - Optional front-matter (`---` delimited).
 - Main content.
 
-Example front-matter:
+There may be different key-value pairs defined in the front-matter section. These include:
 
-```
-title: Example Page
-tags: example, test
-cover: example-cover.jpeg
-summary: Sample summary.
-```
+- title (optional)
+- tags (optional): separated by commas, with or without spaces
+- draft (optional): accepts true or other values. If the `draft` key is missing or set to any value other than `true`, the page is not considered a draft.
+- summary (optional): a single-line summary used when listing pages
 
 #### Examples
 
@@ -132,6 +116,24 @@ This is footer paragraph.
 - **Main Content**: Dynamically loaded. HTML content renders directly. Text files render lines as paragraphs. Lines without spaces that end in a valid image extension (e.g. `.jpg`, `.png`) should be rendered as `<img>` tags. Photos expand on click, reverting on second click or scroll. First paragraph has a drop cap spanning three lines.
 
 ![Sample page](images/project-description-images/sample-page.jpg)
+
+### Content Listing
+
+The list shows titles and summaries, linking to individual pages. Exclude:
+
+- Pages dated in the future.
+- Draft pages
+- Pages without a valid date prefix (i.e., the first 11 characters not in `YYYY-MM-DD-` format).
+
+Subfolders are listed in alphabetical order, followed by content pages in reverse chronological order (most recent at the top).
+
+### Search
+
+The website must support page search functionality. Using the search field displayed in the aside on content listing pages, users should be able to search by title or content.
+
+When a search query is submitted, the results page must display all pages whose title or content contains the query string.
+
+It must also be possible to specify multiple keywords using the / character. In this case, the results page should list all pages whose title or content contains any of the provided keywords (i.e., a logical OR search).
 
 ### Accessibility and Meta Tags
 
