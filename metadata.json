@@ -1,9 +1,23 @@
 {
+  "id": 9,
   "name": "WS2024 S17 - Module C",
   "displayName": "Lyon Heritage Sites",
   "description": "In this project, editors have written articles introducing notable heritage sites in Lyon, France.",
   "url": "https://github.com/marketable-it-skills/s17-es2024-module_c-lyon-heritage-site",
-  "skillDomains": ["Web Technologies"],
+  "skillDomainIds": [1],
+  "languages": ["EN"],
   "competition": "WorldSkills Lyon 2024",
-  "tags": ["HTML", "CSS", "SSR", "JavaScript", "PHP", "Laravel", "Next.js"]
+  "estTime": 3,
+  "authors": [
+    {
+      "name": "Thomas Seng Hin Mak",
+      "url": "https://www.linkedin.com/in/makzan/"
+    },
+    {
+      "name": "Fong Hok Kin",
+      "url": ""
+    }
+  ],
+  "technologies": ["HTML", "PHP", "Node.js"],
+  "tags": ["SSR", "WorldSkills", "CMS"]
 }
